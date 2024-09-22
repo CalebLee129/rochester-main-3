@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+  
+{% block title %}Engineering Success{% endblock %}
+{% block lead %}Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.{% endblock %}
+{% block page_content %}
+<style>
+  .stylesidemenu a,
+    .stylesidemenu a:visited {
+      color: purple;
+      text-decoration: none; /* Remove underline */
+      display: block; /* Make the whole area clickable */
+      padding: 8px; /* Optional: add some padding for better touch targets */
+    }
+    /* Change color and remove text decoration on hover, active, and focus */
+    .stylesidemenu a:hover,
+    .stylesidemenu a:active{
+      color: green; /* Change to green when hovering, active, or focused */
+      text-decoration: none; /* Ensure no underline is visible */
+    }
+</style>
+<div class="text-center bitter">
+  <h1>Engineering!</h1> <br>
+  <p>Design, Build, Test, Learn!!!</p> <hr>
+  <img src="https://static.igem.wiki/teams/5052/engineering/igem-design-phase.png" alt="Engineering Cycle">
+</div>
+<div class="row mt-4 bitter">
+  <div class="col-lg-3">
+    <div id="menu">
+    <h2 class="text-center">Sidebar</h2>
+      <section class="chapter menubg stylesidemenu">
+      <p class="text-large">
+        <a href="#Design">Design</a>
+      </p>
+        <p class="text-large">
+          <a href="#Build">Build</a>
+        </p>
+        <p>
+          <a href="#Test">Test</a>
+        </p>
+        <p><a href="#Learn">Learn</a></p>
+    </div>
+  </div>
+  <div class="col-lg-9 descriptionbox">
+    <h2 class="text-center">Our Process</h2>
+    <hr>
+<section style="padding-top: 10vh;">
+  <h3 id="Design">Design</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus magni ipsa veniam obcaecati optio quisquam voluptate, illo nemo hic doloribus totam assumenda! Architecto reiciendis, numquam porro quasi iste qui corrupti fugit quo similique quia odit eos delectus blanditiis tempore modi neque pariatur veniam sit laboriosam! Odit deserunt, quis saepe ullam labore corporis fugit accusamus id quia similique veritatis, harum recusandae quo incidunt quisquam itaque excepturi autem quas reiciendis vitae? Pariatur aperiam asperiores hic facere. Ex doloribus delectus quas odit distinctio corporis natus mollitia illo ratione sed, corrupti eius autem provident sunt voluptatem tempora reprehenderit magnam, tempore, minus iusto debitis cumque.</p>
+  <h3 id="Build">Build</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias tempora eius at est dignissimos quaerat, eveniet vitae fugiat vel temporibus voluptatem, sapiente expedita, magni dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, nulla! Facilis delectus blanditiis dicta est voluptate, repellat et ducimus voluptatem repellendus pariatur earum. Facere, possimus quis deserunt voluptatem expedita dicta dolor cum atque corrupti repellat beatae quibusdam exercitationem nesciunt dolore eum alias? Eum suscipit dolorem nihil laudantium perferendis, omnis error, sunt unde repellendus debitis ipsa? Sapiente animi voluptas odit atque consequuntur est, fugiat, nihil, temporibus aperiam sit veniam deleniti. Minima eum id sequi voluptatum ab dolorem minus sit accusantium. Dicta blanditiis facere illo cumque inventore provident aliquam, doloribus eligendi laboriosam assumenda? Repellendus neque quod saepe expedita sequi tempore eveniet veritatis!</p>
+  <h3 id="Test">Test</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias tempora eius at est dignissimos quaerat, eveniet vitae fugiat vel temporibus voluptatem, sapiente expedita, magni dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eaque voluptatibus debitis natus nisi iste ex praesentium repudiandae hic pariatur ullam rerum labore quidem, neque quam quasi iure quas provident. Ratione possimus laborum temporibus quos quis maiores inventore, nisi laudantium ut a fugit minima ipsum. Ratione quos autem, modi et ex nam libero ullam distinctio facilis quae natus tenetur dolorum consequatur. Fugiat, quas, autem quod saepe laboriosam quia minima facere labore molestiae quis quasi harum optio voluptatum odio quaerat architecto animi eos soluta pariatur error accusantium deserunt? Voluptatem recusandae temporibus id delectus? Iste sequi repellendus commodi natus delectus quasi itaque.</p>
+  <h3 id="Learn">Learn</h3>
+ </section>
+  </div>
+</div>
+{% endblock %}

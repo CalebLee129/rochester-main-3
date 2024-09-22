@@ -1,0 +1,239 @@
+.parallax {
+  /* The image used */
+  background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+  /* Full height */
+  height:100%;
+  width:auto;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffff;
+}
+
+.parallax-description {
+  background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+ 
+  height:100%;
+  width:auto;
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffff;
+}
+
+.parallax-hardware {
+  background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+  height:100%;
+  width:auto;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffff;
+}
+.parallax-experiments {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-hp {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-safety {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-attributions {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+.parallax-notebook {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-software {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-parts {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-model {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-engineering {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-implementation {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-education {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-safety {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+
+.parallax-contribution {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}
+
+.parallax-results {
+background-image: url("https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg");
+
+height:100%;
+width:auto;
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #ffff;
+}

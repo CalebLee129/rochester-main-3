@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+  
+{% block title %}Project Description{% endblock %}
+{% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
+
+{% block page_content %}
+<style>
+.stylesidemenu a,
+    .stylesidemenu a:visited  {
+      color: purple;
+      text-decoration: none; /* Remove underline */
+      display: block; /* Make the whole area clickable */
+      padding: 8px; /* Optional: add some padding for better touch targets */
+    }
+
+    /* Change color and remove text decoration on hover, active, and focus */
+    .stylesidemenu a:hover,
+    .stylesidemenu a:active{
+      color: green; /* Change to green when hovering, active, or focused */
+      text-decoration: none; /* Ensure no underline is visible */
+    }
+</style>
+<div class="container-fluid">
+<body class="row mt-4 bitter">
+<div class="row">
+  <div class="col-lg-3">
+    <div id="menu">
+    <h2 class="text-center">Sidebar</h2>
+      <section class="chapter menubg">
+      <div class="stylesidemenu">
+        <p><a href="#BG">Background</a></p>
+        <p><a href="#PD">Project Design</a></p>
+        <p><a href="#RF">References</a></p>
+      </div>
+      </section>
+    </div>
+  </div>
+  <div class="col-lg-9 descriptionbox">
+    <h2 class="text-center">Our Project</h2>
+    <hr>
+    <p>
+    <h3 id="BG">Background</h3>
+    Click – lights on. Click – lights off.  In our modern society, our electrical appliances can be controlled with a simple flip of a switch. Electricity has become so prevalent that we often take its presence for granted. However, much of this electricity is generated from fossil fuels, leading to significant environmental issues. The extensive usage of these electricity sources has released an estimated 2 trillion tons of carbon dioxide into the atmosphere, half of which remains there to this day<sup>1</sup>. This vast pool of inorganic carbon exceeds the environment’s capacity to re-absorb it, trapping heat in the atmosphere and raising the average temperature of the Earth to 1.36℃ above the pre-Industrial Revolution levels<sup>2</sup>. The past decade has marked the warmest in recorded history<sup>2</sup>. Current solutions to achieve net carbon neutrality, such as an increase in the amount of planted trees or creating carbon capture devices, have failed to keep pace with escalating fossil fuels reliance amidst the energy crisis. Without adequate action, our Earth will become polluted and uninhabitable. 
+<br>
+    <h3 id="PD">Project Design</h3>
+    In order to reverse climate change, the Rochester iGEM team is developing carbon-negative energy sources aimed at reducing the carbon footprint of humankind. Our innovative technologies will harness carbon dioxide as a clean energy source. We will create a bio-photovoltaic cell utilizing engineered cyanobacteria, which will offer comparable energy efficiency while being more environmentally friendly than a conventional solar panel<sup>3</sup>. The CO<sub>2</sub> capturing mechanism of our device will be strengthened by the enhanced photosynthetic capability of our engineered cyanobacteria strains. The efficiency of the light-dependent reactions will be optimized by overexpressing the alpha and beta subunits of Cytb559, enhancing electron transfer from photosystem II and reducing photoinhibition. These improvements will boost electron extraction from water, leading to higher electricity output. Simultaneously, the efficiency of the light independent reactions will be enhanced through accelerating the carbon fixation pathways. This will be achieved by overexpressing bicarbonate transporters to increase the cellular influx of inorganic carbon, which will then be converted into CO<sub>2</sub> by the overexpression of carbonic anhydrase. Coupling this captured CO<sub>2</sub> with alcohol dehydrogenase and pyruvate decarboxylase in the fermentation process results in higher production of ethanol, a sustainable biofuel alternative viable for transportation and energy production. As such, clean energy will be generated simultaneously in two different forms, resulting in an overall carbon-negative system. 
+<br>
+The carbon sequestration and electricity production ability of cyanobacteria will be modeled to determine the most efficient growth conditions for our bacteria. Additionally, modeling will be used to identify the most efficient electronics configuration, both of which are crucial for optimizing the design of the voltaic cell. This cell will consist of a screen-printed anode and cathode made of conductive ink on a paper substrate, along with screen-printed cyanobacteria suspended in bio-ink positioned atop the anode. A hydrogel soaked in growth medium will be placed on top of the voltaic cell to both help sustain bacterial viability and act as a salt bridge, facilitating electron flow and enabling energy production. 
+<br>
+Over the course of its lifetime, each bio-photovoltaic cell will sequester more carbon than was emitted during the process of its creation. Our approach will develop an efficient energy source that actively counteracts the greenhouse gas effect, advancing from previous efforts to deliver more reliable and effective solutions. Through the creation of our biological solar panel, we will set a goalpost for the future that will lead to a stronger focus on sustainable energy sources, especially carbon-negative options.
+<br>
+<h3 id="RF">References</h3>
+<hr>
+[1]Vigna, Leandro, et al. “The History of Carbon Dioxide Emissions.” World Resources Institute, 3 June 2024, www.wri.org/insights/history-carbon-dioxide-emissions.
+<br>
+[2]“Global Surface Temperature.” NASA, NASA, 7 Feb. 2024, climate.nasa.gov/vital-signs/global-temperature/. 
+<br>
+[3]Tan, Chunlin, et al. “Carbon-negative synthetic biology: Challenges and emerging trends of cyanobacterial technology.” Trends in Biotechnology, vol. 40, no. 12, Dec. 2022, pp. 1488–1502, https://doi.org/10.1016/j.tibtech.2022.09.012. 
+<br>
+[4]Sawa, Marin, et al. “Electricity generation from digitally printed cyanobacteria.” Nature Communications, vol. 8, no. 1, 6 Nov. 2017, https://doi.org/10.1038/s41467-017-01084-4. 
+</p>
+  </div>
+</div>
+</body>
+</div>
+
+
+
+
+
+
+ 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get the fixed navbar height
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+  
+    // Select all anchor links in the sidebar menu
+    document.querySelectorAll('#menu a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor click behavior
+        
+        // Get the href attribute of the clicked anchor and use it to select the target element
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+  
+        if (targetElement) {
+          // Scroll to the target element, minus the navbar height to avoid being hidden under the navbar
+          window.scrollTo({
+            top: targetElement.offsetTop - navbarHeight, 
+            behavior: 'smooth' // Smooth scrolling
+          });
+        }
+      });
+    });
+  });
+  </script>
+
+
+{% endblock %}

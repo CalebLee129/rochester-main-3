@@ -1,0 +1,117 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+
+    <!---- TEAM NAME ---->
+    <a class="brand" href="{{ url_for('home') }}">
+      <img src="https://static.igem.wiki/teams/5052/footer-images/cyanovolt-white-background-linear-removebg-preview-1.png" alt="Cyanovolt" style="height: 44px; width: 130px; ">
+    </a>
+
+    <!---- SMALL SCREEN MENU ICON ---->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned">
+
+        <!---- HOME ---->
+       <!--  <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li> -->
+
+        <!---- TEAM ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{ url_for('pages', page='team') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Team</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+          </ul>
+        </li>
+
+        <!---- Dry Lab ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dry Lab
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Modeling</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+          </ul>
+        </li>
+
+        <!---- Wet Lab ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Wet Lab
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts') }}">Parts</a></li>
+          </ul>
+        </li>
+
+        <!---- HUMAN PRACTICES ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education & Outreach</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}">Integrated Human Practices</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="progress-bar" style="width: 10.4676%;"></div>
+  <script>
+    const pageProgressBar = document.querySelector(".progress-bar")
+    document.addEventListener("scroll", () => {
+      const scrolledPercentage =
+         (scrollContainer().scrollTop /
+           (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+         100;
+     
+      pageProgressBar.style.width = `${scrolledPercentage}%` })
+
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+  const pageProgressBar = document.querySelector(".progress-bar");
+  const navbar = document.querySelector(".navbar"); // Make sure this matches your navbar selector
+
+  // Function to set the position of the progress bar based on the navbar height
+  function setProgressBarPosition() {
+    const navbarHeight = navbar.offsetHeight; // Get the current height of the navbar
+    pageProgressBar.style.top = `${navbarHeight}px`; // Set the top of the progress bar to the navbar height
+  }
+
+  // Function to update the progress bar width based on scroll
+  function updateProgressBarWidth() {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / scrollHeight) * 100;
+    pageProgressBar.style.width = `${scrolled}%`;
+  }
+
+  // Initial setup
+  setProgressBarPosition();
+  updateProgressBarWidth();
+
+  // Update progress bar position and width on scroll
+  document.addEventListener("scroll", updateProgressBarWidth);
+
+  // Update progress bar position on window resize to handle navbar height changes
+  window.addEventListener("resize", setProgressBarPosition);
+});
+
+    </script>
+</nav>

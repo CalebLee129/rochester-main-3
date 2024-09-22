@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+  
+{% block title %}Experiments{% endblock %}
+{% block lead %}Describe the research, experiments, and protocols you used in your iGEM project.{% endblock %}
+
+{% block page_content %}
+
+<style>
+.stylesidemenu a,
+    .stylesidemenu a:visited  {
+      color: purple;
+      text-decoration: none; /* Remove underline */
+      display: block; /* Make the whole area clickable */
+      padding: 8px; /* Optional: add some padding for better touch targets */
+    }
+
+    /* Change color and remove text decoration on hover, active, and focus */
+    .stylesidemenu a:hover,
+    .stylesidemenu a:active {
+      color: green; /* Change to green when hovering, active, or focused */
+      text-decoration: none; /* Ensure no underline is visible */
+    }
+</style>
+
+<body class="bitter">
+  
+
+<div class="row mt-4 bitter">
+  <div class="col-lg-3">
+    <div id="menu">
+    <h2 class="text-center">Sidebar</h2>
+      <section class="chapter menubg stylesidemenu">
+        <p>
+          <a href="#Chassis">Cyanobacteria</a>
+        </p>
+        <p>
+          <a href="#BPV">BPV Cell Components</a>
+        </p>
+        <p>
+          <a href="#Automation">Automated Screen Printer</a>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <div class="col-lg-9 descriptionbox">
+  <h2 id="Chassis"><strong>Cyanobacteria Chassis</strong></h2>
+
+  </div>
+</div>
+<h1 style="padding-top: 5rem;">Chassis</h1>
+  <h3>Picosynechococcus 11901</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere libero consectetur reiciendis minima. Deserunt aperiam aut unde obcaecati perspiciatis incidunt mollitia, vitae dignissimos explicabo, soluta sit amet voluptas rerum suscipit.</p>
+    <img src="https://static.igem.wiki/teams/5052/experiments/11901.jpg" alt="11901" class="img-fluid justify-content-center" style="max-width: 30%; height: auto;">
+   <h3>Synechocystis 6803</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, exercitationem. Architecto autem sed veritatis optio, rerum consectetur recusandae suscipit fuga nihil in nostrum rem adipisci eum iusto impedit porro at?</p>
+    <img src="https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg" alt="11901" class="img-fluid justify-content-center" style="max-width: 30%; height: auto;">
+</div>
+</body>
+
+
+
+{% endblock %}

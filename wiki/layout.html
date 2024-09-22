@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/5052/footer-images/logo.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+
+    <!-- Custom Elements -->
+    <link href="{{url_for('static', filename = 'scrollbar.css') }}" rel="stylesheet">
+    <link href="{{url_for('static', filename = 'parallax.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename = 'to-top-button.js') }}"></script>
+    <title>{% block title %}{% endblock %} | Rochester - iGEM 2024</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  {% include 'menu.html' %}
+
+  <!-- Header -->
+  <header> <!-- class="bg-hero py-5 mb-5" style="background-color: #D9A9F4;" -->
+    <div class="bg-hero py-0">
+	{% block cover_content %}{% endblock %}
+    </div>
+  </header>
+
+  <button class="myButton hidden" onclick="topFunction()" id="myButton" title="Scroll to top"></button>
+   
+   <script>
+     const showOnPx = 100;
+     const backToTopButton = document.querySelector(".myButton")
+
+    const scrollContainer = () => {
+     return document.documentElement || document.body;
+    };
+
+    document.addEventListener("scroll", () => {
+     if (scrollContainer().scrollTop > showOnPx) {
+       backToTopButton.classList.remove("hidden")
+    } else {
+       backToTopButton.classList.add("hidden")
+     }
+   })
+   </script>
+
+
+  <!-- Page Content -->
+  <div class="container">
+    {% block page_content %}{% endblock %}
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  {% include 'footer.html' %}
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

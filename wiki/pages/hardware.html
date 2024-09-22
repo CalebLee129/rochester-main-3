@@ -1,0 +1,363 @@
+{% extends "layout.html" %}
+  
+{% block title %}Hardware{% endblock %}
+{% block cover_content %}
+<div class="container-fluid p-0 parallax-parts">
+  <img alt="completely-blank" class="w-100 mx-auto d-block"
+     src="https://static.igem.wiki/teams/5052/parallax/completely-blank.png">
+</div>
+{% endblock %}
+
+{% block page_content %}
+
+<style>
+  .active-green {
+    color: green !important; /* Force the color to green, overriding Bootstrap */
+  }
+  .stylesidemenu a,
+    .stylesidemenu a:visited  {
+      color: purple;
+      text-decoration: none; /* Remove underline */
+      display: block; /* Make the whole area clickable */
+      padding: 8px; /* Optional: add some padding for better touch targets */
+    }
+
+    /* Change color and remove text decoration on hover, active, and focus */
+    .stylesidemenu a:hover,
+    .stylesidemenu a:active {
+      color: green; /* Change to green when hovering, active, or focused */
+      text-decoration: none; /* Ensure no underline is visible */
+    }
+</style>
+
+<div class="row mt-4 bitter">
+  <div class="col-lg-3">
+    <div id="menu">
+    <h2 class="text-center">Sidebar</h2>
+      <section class="chapter menubg stylesidemenu">
+
+        <p>
+          <a href="#Overview">Overview</a>
+        </p>
+        <p>
+          <a href="#BPV">BPV Cell Components</a>
+          <div id="BPV-menu" class="submenu">
+            <p><a href="#BPV-PaperSubstrate">Paper Substrate</a></p>
+            <p><a href="#BPV-BiologicalInk">Biological Inks</a></p>
+            <p><a href="#BPV-ConductiveInk">Conductive Inks</a></p>
+            <p><a href="#BPV-Hydrogels">Hydrogels</a></p>
+        </div>
+        </p>
+        <p>
+          <a href="#Manual">Manual Screen Printer</a>
+          <div id="Manual-menu" class="submenu">
+            <p><a href="#Manual-Emulsion">Emulsion</a></p>
+          </div>
+        </p>
+        <p>
+          <a href="#Automation">Automated Screen Printer</a>
+          <div id="Automation-menu" class="submenu">
+            <p><a href="#Automation-Why">Why Automation</a></p>
+            <p><a href="#Automation-Parts">Parts</a></p>
+          </div>
+        </p>
+        <p>
+          <a href="#References">References</a>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <div class="col-lg-9 descriptionbox">
+    <hr>
+   <h2 id="Overview">Overview</h2>
+   <p>
+    Our project is to design a biophotovoltaic cell using cyanobacteria. This will be accomplished utilizing a screen printing technique to increase the rate of production. The voltaic cell will be composed of two electrodes printed with conductive ink. These electrodes will be at different concentrations from one another creating a concentration cell to allow electrons to flow through. A layer of bioink containing our cyanobacteria cells will be placed on top of the conductive ink anode creating a bioanode that will be the source of free electrons as the cyanobacteria cells go through photosynthesis. Finally a hydrogel that has been soaked in BG-11 media will be placed on top of the printed biophotovoltaic cells to act as both a source of nutrients for the cells, and a salt bridge for protons. 
+      <br>
+    In addition to a manual system, an automated screen printer will be designed to increase output efficiency. The goal of this system is to automate the printing process to standardize the output and speed up the printing process. 
+   </p>
+<hr>
+
+<h2 id="BPV" class="text-center">Biological Photovoltaic Cell Components</h2>
+<p><strong>INSERT IMAGE HERE OF WHAT BPV LOOKS LIKE</strong></p>
+    <h3 id="BPV-PaperSubstrate">Paper Substrate</h3>
+        <p>A paper substrate was chosen to act as a lightweight, inexpensive, and widely available substrate. Also, it is a practical substrate when considering scaling up our design. The paper was autoclaved prior to coming in contact with cyanobacteria cells.</p>
+
+   <h3 id="BPV-BiologicalInk">Biological Inks</h3>
+        <p>In order to be able to screen print our cyanobacteria, they needed to be suspended in an ink that had a high enough viscosity to contain the ink only in the areas we wanted the biological ink to be printed. 3 different additives, xanthan gum, carboxymethyl cellulose (CMC), and gum arabic, were tested based on literature found on <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5363221/ ">screen printing bacteria</a>. These additives were added to BG11 media so the biological ink that the cyanobacteria is added to is able to sustain life. These inks were tested for four different variables.
+      
+          <p class="display: flex; justify-content: center;">
+            <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#BinkProtocol" role="button" aria-expanded="false" aria-controls="BinkProtocol">
+            Biological Ink Preparation Protocol
+            </a>
+           </p>
+           <div class="collapse" id="BinkProtocol">
+            <div class="card card-body">
+          
+          <ol>
+            <li>Add solute to solution according to appropriate w/v ratio</li>
+            <li>Heat in 50C water bath and stir vigorously until fully dissolved</li>
+            <li>Let cool</li>
+          </ol>
+            </div>
+           </div>
+      
+
+      <h4>Visual Clarity</h4>
+          <p>The visual clarity of the biological inks was observed optically. There was a clear difference in the transparency of the gum arabic biological ink compared to the CMC and xanthan gum. This was due to the ratio of gum arabic added being much higher than the CMC and xanthan gum ratios. Based on observation we concluded the CMC was most transparent, and thus was the best choice to allow the most light through to our cyanobacteria cells.
+          </p>
+          <div class="mw-100 d-flex align-items-center">
+          <img src="https://static.igem.wiki/teams/5052/hardware/bpvvisualclarity.png" alt="Visual Clarity Image" class="mx-auto mw-100">
+        </div>
+      <h4>Consistency</h4>
+          <p>The consistency of the biological inks was observed optically. The goal was to find which ink had a high viscosity, similar to regular screen printing ink. Along with this, the consistency was also important to consider when looking at how much the biological ink spread on paper substrate when applied.</p>
+      <h4>E. coli Viability</h4>
+          <p>E.coli viability in each biological ink was tested to see how well each biological ink was able to sustain life. The E.coli used was transformed to contain Green Fluorescent Protein (GFP) and was added to each biological ink. The inks were spread in a thin layer on paper substrate in a petri dish, and a hydrogel soaked in LB medium was placed on top. These samples were placed in an incubator and imaged using Saphire Software with the assumption that if the <em>E. coli</em> cells die they will not fluoresce. From this experiment it was concluded that all biological inks were able to sustain life, with the CMC ink producing results most similar to our positive control again making it our top candidate.</p>
+          <div class="mw-100 d-flex align-items-center">
+          <img src="https://static.igem.wiki/teams/5052/hardware/bpviability.png" alt="E. coli viability" class="mx-auto mw-100" >
+          </div>
+          <p class="display: flex; justify-content: center;">
+            <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#EcoliProtocol" role="button" aria-expanded="false" aria-controls="EcoliProtocol">
+            Protocol for <em>E. Coli</em> Viability in Biological Inks
+            </a>
+           </p>
+           <div class="collapse" id="EcoliProtocol">
+            <div class="card card-body">
+          
+          <ol>
+            <li>2.5 cm x 2.5 cm square was drawn out on pieces of paper</li>
+            <li>Cut 1 hydrogel into fourths and soaked in 10 mL of LB in mini petri dishes</li>
+            <li>Measured 0.6g CMC, 7.46g GA, 0.18g XG</li>
+            <li>Mixed each additive into 15 mL of LB in a beaker</li>
+            <li>Held in water bath at 50C and stirred vigorously</li>
+            <li>Small glob was painted using a wooden stir stick in each square</li>
+            <li>For E.coli samples 96 microliters was added to each beaker</li>
+            <li>~150 microliters was added for pure E.coli samples</li>
+            <li>Small glob was added to each paper and spread with a wooden stir stick</li>
+            <li>Hydrogel was placed on top of appropriate samples</li>
+          </ol>
+            </div>
+           </div>
+      <h4>Cyanobacteria Viability</h4>
+          <p>NEED TO INSERT DATA HERE</p>
+    
+<h3 id="BPV-ConductiveInk">Conductive Inks</h3>
+   <p>Our printed biophotovoltaic cell was set up using carbon conductive ink as its electrodes. A carbon conductive ink was chosen specifically because it does not contain any harsh chemicals or elements that would interact negatively with our cyanobacteria, like a common silver based conductive ink. Following Sawa et al. design, because the anode and cathode were composed of the same conductive ink a concentration cell had to be created to encourage the flow of electrons. 
+    <br>
+    3 different carbon conductive inks were tested against each other to see which conductive ink performed the best overall in terms of our requirements. </p>
+    <div class="mw-100 d-flex align-items-center">
+    <img src="https://static.igem.wiki/teams/5052/hardware/conductive-inks.png" alt="Conductive Ink" class="rotate-90 mw-100 mx-auto">
+    </div>
+  <h4>Ink Consistency</h4>
+    <p>The consistency of the conductive ink was looked at optically. An ideal ink would have a high viscosity, similar to that of normal screen printing ink. Through observation, it was found that the Novacentrix ink was the least viscous compared to the Nagase ChemteX inks. </p>
+  <h4>Composition</h4>
+    <p>As previously mentioned it was important to select inks that were all carbon based to make sure they would not harm our cyanobacteria cells. </p>
+  <h4>Cyanobacteria Viability</h4>
+    <p>NEEDS TO BE UPDATED</p>
+  <h4>Resistivity</h4>
+    <p>Resistance was measured to find the most conductive ink. Resistance is inversely proportional to conductance. </p>
+  <h4>Voltage</h4>
+  <h4>Design</h4>
+    <p>Different variables are being tested for the electrodes in the voltaic cell, and results from these experiments are being used for our modeling of the electricity output. Variables we are looking at include length, concentration ratio between the anode and cathode, distance between the anode and cathode, shape, and amount of interactions between anode and cathode.</p>
+    <div class="mw-100 d-flex align-items-center">
+    <img src="https://static.igem.wiki/teams/5052/hardware/conductiveinkdesign.png" alt="Conductive Ink Design" class="mx-auto">
+    </div>
+    <p class="text-center">Conductive Ink Design</p>
+
+
+  <h3 id="BPV-Hydrogels">Hydrogels</h3>
+    <p>The hydrogels we selected were based off of the hydrogels used in the Sawa et al. paper. They were selected for their size, clarity, and absorbability. To ensure they would be suitable for our biophotovoltaic design, several experiments were performed to test different variables.</p>
+    <div class="mw-100 d-flex align-items-center">
+    <img src="https://static.igem.wiki/teams/5052/hardware/hydrogeldryingtimediffmedia.png" alt="Graph of Drying Time of different medias" class="mx-auto">
+    </div>
+    <p class="text-center">Drying Time with Different Medias</p>
+    <hr>
+    <div class="mw-100 d-flex align-items-center">
+    <img src="https://static.igem.wiki/teams/5052/hardware/cinkdryinglocation.png" alt="Hydrogel Drying Graph" class="mx-auto">
+  </div>
+    <p class="text-center">Drying Time with Different Locations</p>
+    <hr>
+  <div class="d-flex flex-row mw-30">
+    <img src="https://static.igem.wiki/teams/5052/hardware/cinkresistance-time1.png" alt="Resistance Over Time Graph 1">
+    <img src="https://static.igem.wiki/teams/5052/hardware/cinkresistance-time2.png" alt="Resistance Over Time Graph 2" >
+  </div>
+  <p class="text-center">Resistance Over Time Graph</p>
+
+
+  <h2 id="Manual"><strong>Manual Screen Printing</strong></h2>
+  <h4 id="Manual-Emulsion">Emulsion</h4>
+    <p>The emulsion we chose, Photocure BLU from Murakami Screen USA Inc, was recommended to us by Eileen Bushnell, a professor in screen printing at the College of Art and Design at the Rochester Institute of Technology. In order to figure out how long our screens needed to be exposed under UV light for using our UV light setup, a couple of emulsion Step Tests were performed to gauge the necessary time. The results from the second Step Test showed that the best resolution occurred at a UV cure time of 3:30 seconds.</p>
+
+    <p class="display: flex; justify-content: center;">
+      <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#EmulsionProtocol" role="button" aria-expanded="false" aria-controls="EmulsionProtocol">
+      Emulsion Protocol
+      </a>
+     </p>
+     <div class="collapse" id="EmulsionProtocol">
+      <div class="card card-body">
+    
+        <ol>
+          <li>Put on gloves</li>
+          <li>Turn off lights</li>
+          <li>Pour emulsion into scoop coater until about half full</li>
+          <li>Starting with the print side of screen (the flush side) use scoop coater to apply a layer of emulsion starting at the bottom and going up the screen</li>
+          <li>Repeat this process on the same side going the opposite direction</li>
+          <li>Flip screen over and smooth out, always do squeegee side last (inside)</li>
+          <li>Continue spreading with squeegee until there is a thin and even layer of emulsion, apply enough pressure to hear squeegee running along the screen</li>
+          <li>Dry with squeegee side up (put thumbtacks in screen side corners to allow for airflow)</li>
+          <li>Store in black storage box to prevent light exposure</li>
+        </ol>
+      </div>
+     </div>
+    <p class="display: flex; justify-content: center;">
+      <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#StepTestProtocol" role="button" aria-expanded="false" aria-controls="StepTestProtocol">
+      Step Test Protocol
+      </a>
+     </p>
+     <div class="collapse" id="StepTestProtocol">
+      <div class="card card-body">
+        <ol>
+          <li>Create a positive to lay over screen</li>
+          <li>Draw lines on screen at chosen intervals and mark down times (2 min intervals)</li>
+          <li>Cover area that is unexposed with rubylith</li>
+          <li>Turn on UV light in accordance with each interval starting at longest exposure time</li>
+          <li>Move rubylith with each interval</li>
+          <li>Remove positive and rubylith when finished</li>
+          <li>Wash off screen in sink filtering the water with emulsion through a t-shirt</li>
+          <li>Observe which time performed the best (not over or underexposed)</li>
+          <ul>
+            <li>Under exposed: emulsion is still slimy</li>
+            <li>Over exposed: emulsion will not wash off</li>
+          </ul>
+        </ol>
+      </div>
+     </div>
+<div class="d-flex flex-row">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test1emulsion1.png" alt="Emulsion Picture 1" class="mx-auto img-fluid">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test1emulsion2.png" alt="Emulsion Picture 2" class="mx-auto img-fluid">
+</div>
+<hr>
+
+  <h4 style="padding-top: 3vh;">Emulsion Test 2: Resolution Step Test</h4>
+  <p>This image was put through ImageJ to quantify how much surface area was printed at each time interval. From this it was concluded that 3:30 seconds performed the best. </p>
+  <div class="image-stack-wrapper">
+    <div class="image-stack-text text-center"><strong>Emulsion Process!</strong></div>
+    <div class="image-stack d-block mx-auto">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test2emulsion1.png" class="stacked-image active" alt="Image 1">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test2emulsion2.png" class="stacked-image" alt="Image 2">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test2emulsion3.png" class="stacked-image" alt="Image 3">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test2emulsion4.png" class="stacked-image" alt="Image 4">
+     <img src="https://static.igem.wiki/teams/5052/hardware/test2emulsion5.png" class="stacked-image" alt="Image 4">
+    </div>
+    <div class="image-stack-text">Click Me!</div>
+   </div>
+  <h4>Screen Set Up</h4>
+  <p>To prevent there being air bubbles and other disruptions in the emulsion layer that would decrease the detail of our stencil, each screen was first removed of dust and other debris using tape. Once the screen was clean the emulsion was applied in a dark room with the lights turned off to prevent the photoreactive emulsion from curing entirely. The emulsion was applied with a scoop coater constructed from cardboard and duct tape, and smoothed out with a squeegee. Once the emulsion was applied, 4 thumbtacks were placed in the corners of the screen and the screen was placed upside down in a black stage container to prevent any light exposure while the emulsion dried for about 24 hours. Our desired design for the screen was created in Procreate and printed onto transparent film using the IT Center in the Simon School of Business. To get the design onto the screen, the screen was pulled out of the black container and placed in a dark room. The transparent film was laid over the screen, and a large glass panel was placed on top to keep the transparent film flush against the screen. The UV light was placed above the setup and was found experimentally to work the best at 3:30 seconds. After curing the screen, it was removed from the setup and placed in the sink to wash out any uncured emulsion, leaving only our stencil. A t-shirt was placed at the bottom of the sink to act as a filter and prevent any emulsion from going down the drain and into the waterways. Once the screen was washed out it was left for 24 hours to dry and after that was ready to use for printing.</p>
+  <hr>
+
+  <h2 id="Automation"><strong>Automated Screen Printer</strong></h2>
+  <h4>Why Automation?</h4>
+    <p>This design was based on industrial automatic screen printers that are used to mass produce t-shirts and other clothing with screen printed designs. They are set up so that each station is a different color to prevent cross contamination of the colors, and the only manual process involved is loading and unloading the shirt. This is favorable because it speeds up the printing process, and not a lot of training is required to be able to work with these machines. For our design we envision a large quantity of these biophotovoltaic cells will need to be printed to create a substantial amount of electricity, so having a way to quickly and precisely print them is necessary.</p>
+  <h4>Parts</h4>
+    <h5>Screen Printer</h5>
+     <p>The screen printer we used as our base was the 4 Color 4 Station Silk Screening Screenprint Press Screen Printing Machine from Vevor, purchased through Home Depot. This is a manual screen printing machine that we modified to automate parts of it.</p>
+     <p>Setup: The screen printer consists of 4 stations. The first one is the loading and unloading dock. This is where the paper substrate is added and taken off, this process will be done manually. The second station is where the conductive ink is printed. The screen on this station has the anode and cathode design. Conductive ink is dispensed at the top of the screen and the printer arm moves down into position. Then the roller moves back and forth in a linear motion to spread the conductive ink over the screen and leave the printed electrodes on the paper. The next station is the drying station where a heat gun is powered on to dry the conductive ink quicker. The conductive ink must be dry before printing the biological ink to prevent smearing which would allow the anode and cathode to interact, and to prevent the cyanobacteria cells from interacting directly with the conductive ink. The final station is where the bioanode is printed using the biological ink. The printing process is the same as the second station.</p>
+    
+    <h2 id="References"></h2>
+
+    <p class="display: flex; justify-content: center;">
+      <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#ReferenceCollapse" role="button" aria-expanded="false" aria-controls="ReferenceCollapse">
+      References
+      </a>
+     </p>
+     <div class="collapse" id="ReferenceCollapse">
+      <div class="card card-body">
+    <p>Reference 1</p>
+    <p>Reference 2</p>
+      </div>
+     </div>
+
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      // Get the fixed navbar height
+      const navbarHeight = document.querySelector(".navbar") ? document.querySelector(".navbar").offsetHeight : 0;
+    
+      // Select all anchor links in the sidebar menu
+      document.querySelectorAll('#menu a').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault(); // Prevent default anchor click behavior
+              
+              // Get the href attribute of the clicked anchor and use it to select the target element
+              const targetId = this.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+    
+              if (targetElement) {
+                  // Scroll to the target element, minus the navbar height to avoid being hidden under the navbar
+                  window.scrollTo({
+                      top: targetElement.offsetTop - navbarHeight, 
+                      behavior: 'smooth' // Smooth scrolling
+                  });
+  
+                  // Expand the corresponding submenu if exists
+                  const submenu = document.querySelector(targetId + "-menu");
+                  if (submenu) {
+                      // Collapse all other submenus first
+                      document.querySelectorAll(".submenu").forEach(sub => {
+                          sub.style.display = "none";
+                      });
+                      // Expand the relevant submenu
+                      submenu.style.display = "block";
+                  }
+  
+                  // Highlight the clicked link
+                  document.querySelectorAll('#menu a').forEach(link => link.classList.remove('active'));
+                  this.classList.add('active');
+              }
+          });
+      });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function() {
+      const imageStacks = document.querySelectorAll('.image-stack');
+  
+      imageStacks.forEach(stack => {
+          const images = stack.querySelectorAll('.stacked-image');
+          let currentImageIndex = 0;
+  
+          // Function to rotate images within each stack
+          function rotateImages() {
+              images[currentImageIndex].classList.remove('active');
+              currentImageIndex = (currentImageIndex + 1) % images.length;
+              images[currentImageIndex].classList.add('active');
+          }
+  
+          // Add click event listener to each image stack
+          stack.addEventListener('click', rotateImages);
+      });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function() {
+      const imageStacks = document.querySelectorAll('.image-stack-horizontal');
+  
+      imageStacks.forEach(stack => {
+          const images = stack.querySelectorAll('.stacked-image-horizontal');
+          let currentImageIndex = 0;
+  
+          // Function to rotate images within each stack
+          function rotateImages() {
+              images[currentImageIndex].classList.remove('active');
+              currentImageIndex = (currentImageIndex + 1) % images.length;
+              images[currentImageIndex].classList.add('active');
+          }
+  
+          // Add click event listener to each image stack
+          stack.addEventListener('click', rotateImages);
+      });
+  });
+  
+  
+   </script>

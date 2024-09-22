@@ -1,0 +1,581 @@
+body { padding-top: 56px; }
+.left-aligned { margin-left: auto; }
+.bg-dark { background-color: #343a40 !important; }
+.bg-hero { background-color: #45b06cff; }
+
+/* CALLOUT */
+.bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
+.bd-callout h4 { margin-bottom:.25rem }
+.bd-callout p:last-child { margin-bottom:0 }
+.bd-callout code { border-radius:.25rem }
+.bd-callout+.bd-callout { margin-top:-.25rem }
+.bd-callout-info { border-left-color:#5bc0de }
+.bd-callout-warning { border-left-color:#f0ad4e }
+.bd-callout-danger { border-left-color:#d9534f }
+
+/* footer */
+footer a { color: white; font-weight: bold; text-decoration: none; }
+footer a:hover { color: white; text-decoration: underline; }
+*{
+  padding: 0;
+  left: 0;
+  top: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+.bitter{
+    font-family: "Bitter", serif;
+    }
+
+/* makes all text this */
+:root{
+  --bs-body-font-family:'bitter', serif;
+}
+
+.teamrole{
+    background-color: #B08FED;
+    border-radius: 1rem;
+    width:100%;
+    position: relative;
+    left: 7.5rem;
+    max-width:10rem;
+    text-align: center;
+    padding: 0.4rem;
+    /* text-shadow: 0.02rem 0.02rem 0.05rem #000; */
+  }
+.team-picture {
+      width: 20rem; height: 20rem; object-fit:cover; border-radius: 50%;
+    }
+.flexbox-container {
+      display:flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      width: 100%;
+    }
+
+
+.flexbox-item{
+      background-color: #FDF4E8;
+      width:25rem;
+      height:30rem;
+      margin:1rem;
+      padding-top:5rem;
+      padding-bottom: 35rem;
+      border: solid black 2px;
+      border-radius: 2rem;
+      position: relative;
+    }
+.flexbox-item:hover .overlay{
+      height: 100%;
+    }  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 1s ease;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+
+
+/* Home Page */
+.hometitle-box{
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+}
+
+.homedescription-box{
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+}
+
+
+.landing{
+    min-height: 100vh;
+    background: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0rem 5rem;
+  }
+  
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+  }
+  
+.nav-links{
+    display:flex;
+    list-style: none;
+  }
+  
+.nav-links li {
+    padding-left: 10rem;
+    font-size: 1.2rem;
+  }
+
+  .image-move{
+    position:absolute;
+  }
+  
+
+  .intro{
+    background:black;
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+ 
+ .slider{
+    background:#B1FA9C;
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+ 
+ 
+ .parent-home-element{
+  margin-top: 100px;
+  width: 100px;
+  height: 500px;
+ }
+ 
+ 
+ /* .slider-responsive{
+  height: 60vh;
+  width: 40vw;
+  max-width: 100%;
+  position: absolute;
+  top: 10vh;
+ } */
+ 
+ 
+ .responsive-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+ }
+ 
+ 
+ .scrape {animation-fill-mode: forwards;
+  animation-name: paint;
+  animation-duration: 2s;
+  position: absolute;
+  left: -35vw;
+  animation-timing-function: ease-in;
+  z-index: 3;
+ }
+ 
+ 
+ @keyframes paint {
+      0% {
+          transform: translateX(-35vw);
+      }
+    
+      100% {
+          transform: translateX(140vw);
+      }
+ }
+ 
+ 
+ 
+ 
+ .main__bg {
+  background-image: linear-gradient(to right, green 20%, green 100%);
+  animation: slide 2.8s ease-in-out forwards;
+  position: fixed;
+  top: 0;
+  bottom: 25rem;
+  left: -10%;
+  right: -50%;
+  opacity: 1;
+  z-index: 1;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ @keyframes slide {
+  0% {
+      transform: translateX(-15%);
+  }
+   100% {
+      transform: translateX(85%);
+  }
+ }
+ 
+ 
+ .clear{
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  position: absolute;
+  top: 10vh;
+ }
+ 
+ 
+ .green{
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  position: absolute;
+  top: 10vh;
+ }
+ 
+ 
+ .Box{
+  width: 100%;
+  height: 100%;
+  top: 10vh;
+  background-color: #19b923;
+  position: absolute;
+  z-index: 1;
+  animation: move 2s linear 0.6s 1;
+  animation-fill-mode: forwards;
+  object-fit: cover;
+ }
+ 
+ 
+ .Box2{
+  width: 100%;
+  height:100%;
+  top: 10vh;
+  background-color: #FFF;
+  z-index: -1;
+  animation: move 2.2s linear 2.8s 1;
+  animation-fill-mode: forwards;
+  object-fit: cover;
+  position: absolute;
+ }
+ 
+ 
+ @keyframes move {
+  0% {   
+      transform: translateX(0%);
+  }
+ 
+ 
+  100%{
+      transform: translateX(180%);
+  }
+ }
+ 
+ 
+ .scrape2 {animation-fill-mode: forwards;
+  animation-name: paint2;
+  animation-duration: 2.2s;
+  position: absolute;
+  left: -50vw;
+  animation-timing-function: ease-in;
+  z-index: 5;
+  animation-delay: 2s;
+ }
+ 
+ 
+ @keyframes paint2 {
+  0% {
+      transform: translateX(-35vw);
+  }
+  100% {
+      transform: translateX(140vw);
+  }
+ }
+ 
+ 
+ .newpurple{
+  width: 100%;
+  height: auto;
+  z-index: -3;
+  position: absolute;
+  top: 10vh;
+ }
+ 
+ 
+ @media screen and (max-width: 600px) {
+  .box,
+  .box2{
+    height: 70%;
+  }
+ }
+ 
+
+  
+/* Project Description */
+.descriptionbox{
+  border: 2px solid black;
+  border-radius: 1rem;
+  box-shadow: 5px 5px #24B871;
+  padding: 4rem 2rem;
+  background-color: whitesmoke;
+}
+
+
+/* Attributions */
+.attribution-flexbox-item{
+  background-color: #FAF9F6;
+      width:25rem;
+      height:auto;
+      margin:1rem;
+      padding: 2rem 1rem;
+      border: solid black 2px;
+      position: relative;
+}
+
+.attribution-flexbox-container {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Fonts */
+.Text-Large
+{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.semi-bold
+{
+  font-weight: 600;
+}
+
+/* Scroll Bar for Sidebar Menus */
+
+.chapter {
+  color: #d8a931; 
+  font-weight: bold;
+}
+
+.menubg {
+  position: relative;
+  flex: none;
+  width: 200px;
+  margin: 50px 0px;
+  overflow: hidden;
+  transition: width 0.5s;
+}
+
+#menu{
+  position: sticky;
+  padding: 85px 20px;
+  width: 100%;
+  transition: width .5s;
+}
+
+/* Navbar */
+.brand {
+  height: 44px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+/* Collapse Buttons */
+
+.full-width-button {
+  display: block; /* Makes the button behave like a block-level element */
+  width: 100%; /* Button will take up the full width of its container */
+  text-align: center; /* Optional: Centers the text inside the button */
+  margin: 10px 0; /* Optional: Adds some margin around the button */
+}
+
+.custom-purple {
+  background-color: #d1c4e9; /* Light purple */
+  color: white;
+  border: none;
+}
+
+.custom-purple:hover {
+  background-color: #673ab7; /* Dark purple */
+  color: white;
+}
+
+.custom-purple:active{
+  background-color: #673ab7;
+  color: white;
+}
+
+.custom-purple:focus{
+  background-color: #673ab7;
+  color: white;
+}
+
+/* home page */
+/* .sliding-transition {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trigger {
+  width: 100%;
+  height: 50vh; 
+}
+
+.image-container {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  width: 300px;
+  height: 100px;
+  position: relative;
+  transition: transform 1s ease;
+  z-index: 5;
+}
+
+
+.image-left {
+  transform: translateX(-150%);
+}
+
+.image-right {
+  transform: translateX(150%);
+}
+
+
+.animate-in .image-left {
+  transform: translateX(0);
+}
+
+.animate-in .image-right {
+  transform: translateX(0);
+}
+ */
+
+/* MODELING */
+.submenu {
+  margin-left: 20px; /* Indent submenu items */
+  display: none;     /* Start with submenu hidden */
+}
+
+.menubg {
+  position: relative;
+}
+
+.menubg .submenu {
+  margin-top: 10px; /* Space between main menu item and submenu */
+}
+
+#menu {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  max-height: 100vh; /* Ensure it doesn't overflow the viewport */
+  overflow-y: auto; /* Add scrolling inside the sidebar if content overflows */
+}
+
+.submenu a.active {
+  color: #007bff; /* Customize this color as needed */
+  font-weight: bold;
+}
+
+/* Education & Outreach */
+.image-stack-wrapper {
+  padding: 0.5rem; /* Adds space around the image stack */
+  border: 2px solid lightgray; /* Creates a border around the image stack */
+  border-radius: 15px; /* Rounds the corners of the border */
+  width: fit-content; /* Shrinks the container to fit its content */
+  margin: 0 auto; /* Centers the container */
+}
+
+.image-stack {
+  width: 100%; /* Make the stack responsive */
+  max-width: 400px; /* Control the max width of the stack */
+  width: 30vw;
+  height: 50vh; /* Set a fixed height for consistency */
+  position: relative; /* Required for controlling the inner images */
+  overflow: hidden; /* Hide any overflowing part of the images */
+  padding-bottom: 3vh;
+  padding-top:3vh;
+}
+
+.stacked-image {
+  width: 100%; /* Ensure all images take up full width of the container */
+  height: 100%; /* Ensure all images take up full height of the container */
+  object-fit: cover; /* Crop the image to fill the container while maintaining aspect ratio */
+  position: absolute; /* Overlap images on top of each other */
+  top: 0;
+  left: 0;
+  display: none; /* Hide all images by default */
+}
+
+.stacked-image.active {
+  display: block; /* Show the active image */
+}
+
+.image-stack-horizontal{
+  width: 100%; /* Make the stack responsive */
+  max-width: 400px; /* Control the max width of the stack */
+  width: 50vw;
+  height: 50vh; /* Set a fixed height for consistency */
+  position: relative; /* Required for controlling the inner images */
+  overflow: hidden; /* Hide any overflowing part of the images */
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+}
+
+.stacked-image-horizontal {
+  width: 100%; /* Ensure all images take up full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop the image to fit the container while maintaining aspect ratio */
+  display: none; /* Hide all images by default */
+}
+
+.stacked-image-horizontal.active {
+  display: block; /* Show the active image */
+}
+
+.education-image-container {
+  background-color: #9cd498; /* Light green background color */
+  border-radius: 1rem; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  display: inline-flex; /* Flexbox layout for images */
+  margin: 20px auto; /* Centering the container */
+  border: 2px solid #a4e0a0; /* Optional: add a border */
+}
+
+.image-stack-text {
+  margin-top: 10px; /* Space between the image stack and the text */
+  font-size: 16px; /* Size of the text */
+  color: #333; /* Color of the text */
+}

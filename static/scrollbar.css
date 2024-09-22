@@ -1,0 +1,181 @@
+/**
+To add directly to files
+
+*  <div class="scrollbar" id="ex3">
+*      <div class="content">Example 3</div>
+*  </div>
+*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9b3ef;
+  box-shadow: inset 0 0 5px #9c80ac;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(8, 55, 26, 0.886);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(18, 123, 58, 0.886);
+}
+
+/* Handle when clicked */
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(18, 123, 58, 0.886);
+}
+
+/* Scroll to top button */
+.myButton {
+  background-image: url(https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #a586a8;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  opacity: 100%;
+  transition: opacity 0.5s;
+  overflow:hidden;
+
+}
+
+.myButton:hover {   
+  background-image: url(https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg);
+  background-color: #dac3dd;
+} 
+
+.myButton:active {   
+  background-image: url(https://static.igem.wiki/teams/5052/static-elements/fullsizerender.jpeg); 
+  background-color: #dac3dd;
+}
+
+.hidden {
+opacity: 0%
+}
+
+/* .progress-bar {
+height: 10px;
+background: #d9b3ef;
+position: fixed;
+top: 9vh;
+left: 0;
+border-radius: 5px;
+opacity: 50%;
+} */
+
+.progress-bar {
+height: 10px;
+background: #d9b3ef;
+position: fixed;
+top: 0; /* Initial position; will be updated dynamically by JavaScript */
+left: 0;
+border-radius: 5px;
+opacity: 50%;
+width: 0; /* Initially set to 0 to animate */
+transition: width 0.2s ease; /* Smooth transition for width */
+}
+
+
+.scrollgradient {
+height: 3700px; /* Used to enable scrolling */
+background: linear-gradient(#002f15 0%, #93db97 51%, #ffff 85%);
+position:absolute;
+width:100%;
+}
+
+.scrollgradient-pd {
+height: 3000px; /* Used to enable scrolling */
+background: linear-gradient(#f5f0f5 0%, #faf7fa 51%, #ffff 85%);
+position:absolute;
+width:100%;
+}
+
+.accordion-button.collapsed {
+background: #d5fdd7;
+border-radius: 0px;
+}
+
+.blockquote-custom {
+position: relative;
+font-size: 1.3rem;
+}
+
+.card-bq {
+border: 5px solid #dac3dd;
+}
+
+.blockquote-custom-icon {
+background-image: url(https://static.igem.wiki/teams/4588/wiki/pandp-figs/img-4086.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #002f15;
+width: 50px;
+height: 50px;
+border-radius: 70%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+top: -40px;
+left: 19px;
+}
+
+/* Navbar tinkering */
+.section-nav {
+  padding-left: 0px;
+  margin-bottom: 20px;
+  border-radius:20px;
+  background:#f0def3;
+  display: block;
+  position:sticky;
+  top:60px;
+  
+  ul {
+    list-style-type: none;
+    overflow:auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    background:#f0def3;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #cbbbcd;
+    color: rgb(0, 0, 0);
+  }
+  
+  li a:active {
+    background-color: #cbbbcd;
+    color: rgb(0, 0, 0);
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+      color: #000000;
+      background-color: #cbbbcd;
+  }
+  
+}
+

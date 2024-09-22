@@ -1,0 +1,263 @@
+{% extends "layout.html" %}
+  
+{% block title %}Experiments{% endblock %}
+{% block lead %}Describe the research, experiments, and protocols you used in your iGEM project.{% endblock %}
+
+{% block page_content %}
+
+<style>
+.stylesidemenu a,
+    .stylesidemenu a:visited  {
+      color: purple;
+      text-decoration: none; /* Remove underline */
+      display: block; /* Make the whole area clickable */
+      padding: 8px; /* Optional: add some padding for better touch targets */
+    }
+
+    /* Change color and remove text decoration on hover, active, and focus */
+    .stylesidemenu a:hover,
+    .stylesidemenu a:active {
+      color: green; /* Change to green when hovering, active, or focused */
+      text-decoration: none; /* Ensure no underline is visible */
+    }
+</style>
+
+<body class="bitter">
+  
+
+<div class="row mt-4 bitter">
+  <div class="col-lg-3">
+    <div id="menu">
+    <h2 class="text-center">Sidebar</h2>
+      <section class="chapter menubg stylesidemenu">
+        <p>
+          <a href="#Chassis">Cyanobacteria</a>
+        </p>
+        <p>
+          <a href="#BPV">BPV Cell Components</a>
+        </p>
+        <p>
+          <a href="#Automation">Automated Screen Printer</a>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <div class="col-lg-9 descriptionbox">
+  <h2 id="Chassis"><strong>Cyanobacteria Chassis</strong></h2>
+
+
+
+
+<div class="text-center align-middle">
+<h3>Basic Parts</h3>
+</div>
+<div class="table-responsive-sm">
+  <table class="table table-hover table-bordered table-striped  caption-top" style="background-color: rgb(221, 171, 229);">
+                    <tr>
+                        <th scope="col">
+                          Part Number
+                        </th>
+                        <th scope="col">
+                          Part Name
+                        </th>
+                        <th scope="col">
+                          Type
+                        </th>
+                        <th scope="col">
+                          Description
+                        </th>
+                        <th scope="col">
+                          Length
+                        </th>
+                        <th scope="col">
+                          RFC Compatible
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-light" style="background-color: rgb(239, 204, 241);">
+                  
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588023">BBa_K4588023</a></td>
+                      <td>HpaB.Bacteria.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain B  -<em> E. coli</em> codon optimized.</td>
+                      <td>1431 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588024">BBa_K4588024</a></td>
+                      <td>HpaC.Bacteria.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain C - <em>E. coli</em> codon optimized.</td>
+                      <td>498 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588025">BBa_K4588025</a></td>
+                      <td>TyrB.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for tyrosine aminotransferase.</td>
+                      <td>1191 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588026">BBa_K4588026</a></td>
+                      <td>TAL.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for tyrosine ammonia lyase.</td>
+                      <td>1518 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588027">BBa_K4588027</a></td>
+                      <td>HpaB.Yeast.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain B -<em>S. cerevisiae codon optimized.</em></td>
+                      <td>1431 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588028">BBa_K4588028</a></td>
+                      <td>HpaC.Yeast.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain C - <em>S. cerevisiae</em> codon optimized.</td>
+                      <td>504 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588029">BBa_K4588029</a></td>
+                      <td>4Cl.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for 4-coumaroyl CoA-ligase. </td>
+                      <td>1683 bp</td>
+                      <td>10, 12, 23, 25, 1000</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K4588030">BBa_K4588030</a></td>
+                      <td>RAS.Coding</td>
+                      <td>Basic: Coding</td>
+                      <td>Coding sequence for rosmarinic acid synthase.</td>
+                      <td>1290 bp</td>
+                      <td>10, 12, 21, 23, 25, 1000</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+<br>
+<br>
+
+<h3>Composite Parts</h3>
+<div class="table-responsive-sm">
+    <table class="table table-hover table-bordered table-striped  caption-top" style="background-color: #d5fdd7;;">
+                      <tr>
+                          <th scope="col">
+                            Part Number
+                          </th>
+                          <th scope="col">
+                            Part Name
+                          </th>
+                          <th scope="col">
+                            Type
+                          </th>
+                          <th scope="col">
+                            Description
+                          </th>
+                          <th scope="col">
+                            Length
+                          </th>
+                          <th scope="col">
+                            RFC Compatible
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-light" style="background-color: #d5fdd7;">
+                    
+  <tr>
+    <td><a href="http://parts.igem.org/Part:BBa_K4588034">BBa_K4588034</a></td>
+    <td>D-LDH</td>
+    <td>Composite</td>
+    <td>Expresses lactate dehydrogenase. This protein converts 4-dihydroxyphenyllactate into salvianic acid A.</td>
+    <td>1277 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(235, 255, 236);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588033">BBa_K4588033</a></td>
+    <td>HpaB.Bacteria</td>
+    <td>Composite</td>
+    <td>Expresses a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain B. This protein in conjuntion with HpaC converts 4-hydroxyphenylpyruvate into 4-dihydroxyphenyllactate in <em>E. coli.</em></td>
+    <td>1645 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(201, 233, 212);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588035">BBa_K4588035</a></td>
+    <td>HpaC.Bacteria</td>
+    <td>Composite</td>
+    <td>Expresses a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain C. This protein in conjuntion with HpaB converts 4-hydroxyphenylpyruvate into 4-dihydroxyphenyllactate in <em>E. coli.</em></td>
+    <td>712 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(224, 254, 234);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588036">BBa_K4588036</a></td>
+    <td>TyrB</td>
+    <td>Composite</td>
+    <td>Expresses tyrosine ammonia lyase. This protein converts L-tyrosine into p-coumaric acid.</td>
+    <td>1881 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(201, 233, 212);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588037">BBa_K4588037</a></td>
+    <td>TAL</td>
+    <td>Composite</td>
+    <td>Expresses tyrosine ammonia lyase. This protein converts L-tyrosine into p-coumaric acid.</td>
+    <td>2208 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(224, 254, 234);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588038">BBa_K4588038</a></td>
+    <td>HpaB.Yeast</td>
+    <td>Composite</td>
+    <td>Expresses a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain B. This protein in conjuntion with HpaC converts p-coumaric acid to caffeic acid in <em>S. cerevisiae.</em></td>
+    <td>2121 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(201, 233, 212);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588039">BBa_K4588039</a></td>
+    <td>HpaC.Yeast</td>
+    <td>Composite</td>
+    <td>Expresses a 4-hydroxyphenylacetate 3-monooxygenase reductase complex domain C. This protein in conjuntion with HpaB converts p-coumaric acid to caffeic acid in <em>S. cerevisiae.</em></td>
+    <td>1194 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(224, 254, 234);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588040">BBa_K4588040</a></td>
+    <td>4Cl</td>
+    <td>Composite</td>
+    <td>Expresses 4-coumaroyl CoA-ligase. This protein converts caffeic acid to caffeoyl CoA.</td>
+    <td>2373 bp</td>
+    <td>10, 12, 23, 25, 1000</td>
+  </tr>
+  <tr style="background-color:rgb(201, 233, 212);">
+    <td><a href="http://parts.igem.org/Part:BBa_K4588041">BBa_K4588041</a></td>
+    <td>RAS</td>
+    <td>Composite</td>
+    <td>Expresses rosmarinic acid synthase. This protein  fuses caffeoyl CoA and salvianic acid A to produce rosmarinic acid.</td>
+    <td>1980 bp</td>
+    <td>10, 12, 21, 23, 25, 1000</td>
+  </tr>
+
+</tbody>
+
+
+</table>
+</div>
+
+</section>
+</section>
+<br>
+<br>
+
+</div>
+</div>
+</body>
+{% endblock %}

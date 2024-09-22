@@ -1,0 +1,768 @@
+{% extends "layout.html" %}
+  
+{% block title %}Human Pracitces{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
+{% block page_content %}
+
+<style>
+  .active-green {
+    color: green !important; /* Force the color to green, overriding Bootstrap */
+  }
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .submenu::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .submenu {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.stylesidemenu a,
+    .stylesidemenu a:visited  {
+      color: purple;
+      text-decoration: none; /* Remove underline */
+      display: block; /* Make the whole area clickable */
+      padding: 8px; /* Optional: add some padding for better touch targets */
+    }
+
+    /* Change color and remove text decoration on hover, active, and focus */
+    .stylesidemenu a:hover,
+    .stylesidemenu a:active  {
+      color: green; /* Change to green when hovering, active, or focused */
+      text-decoration: none; /* Ensure no underline is visible */
+    }
+</style>
+  
+
+<div class="container-fluid mt-4">
+  <div class="row">
+      <div class="col-lg-3" style="scrollbar-width: none; 
+      .scrollable-element::-webkit-scrollbar {display: none;}">
+          <div id="menu">
+              <h2 class="text-center">Sidebar</h2>
+
+              <section class="chapter menubg stylesidemenu">
+              <p>Overview</p>
+              <p><a href="#SilverHumanPractices">Silver Human Practices</a></p>
+              <div id="SilverHumanPractice-menu" class="submenu">
+                <p><a href="#SHPIdentification">Problem Identification</a></p>
+                <p><a href="#SHPStakeholder">Stakeholder Identification</a></p>
+              </div>
+              <p><a href="#IntegratedHumanPractices">Integrated Human Practices</a></p>
+              <div id="IntegratedHumanPractices-menu" class="submenu">
+                <p><a href="#IHPSolution">Solution</a></p>
+                <p><a href="#IHPInterview">Interviews</a></p>
+                <p><a href="#IHPReflection">Reflection</a></p>
+                <p><a href="#IHPAnalysis">Analysis<a></p>
+              </div>
+              <p><a href="#Implementation">Implementation</a></p>
+
+              <p><a href="#Interviews">Interviews</a></p>
+                  <p><a href="#MilestoneOne">Milestone 1</a></p>
+                  <div id="MilestoneOne-menu" class="submenu">
+                    <p><a href="#Scott">Scott Thompson</a></p>
+                    <p><a href="#Shalini">Shalini Beath</a></p>
+                    <p><a href="#Abigail">Abigail McHugh Grifa</a></p>
+                    <p><a href="#Carra">Carra Sahler</a></p>
+                    <p><a href="#Karen">Dr Karen Berger</a></p>
+                    <p><a href="#Kristen">Dr Kristin Doughty</a></p>
+                    <p><a href="#Jonathan">Dr Jonathan Herington</a></p>
+                    <p><a href="#Mike">Mike Whitmore</a></p>
+                </div>
+                  <div>
+                      <p><a href="#MilestoneTwo">Milestone 2</a></p>
+                      <div id="MilestoneTwo-menu" class="submenu">
+                          <p><a href="#Alistair">Dr Alistair McCormick</a></p>
+                          <p><a href="#Johnson">Dr Johnson & Young</a></p>
+                      </div>
+                    </div>
+                  <div>
+                      <p><a href="#MilestoneThree">Milestone 3</a></p>
+                      <div id="MilestoneThree-menu" class="submenu">
+                          <p><a href="#Paolo">Dr Paolo Bombelli</a></p>
+                          <p><a href="#Eileen">Dr Eileen Bushnell</a></p>
+                          <p><a href="#Jenny">Dr Jenny Zhang</a></p>
+                          <p><a href="#Kara">Dr Kara Bren</a></p>
+                      </div>
+                  </div>
+                  <div>
+                      <p><a href="#MilestoneFour">Milestone 4</a></p>
+                      <div id="MilestoneFour-menu" class="submenu">
+                          <p><a href="#Kiran">Kiran Gitanshu</a></p>
+                          <p><a href="#Spencer">Spencer & Weissert</a></p>
+                          <p><a href="#Gitanshu">Gitanshu Bhatia</a></p>
+                      </div>
+                  </div>
+                  <div>
+                      <p><a href="#MilestoneFive">Milestone 5</a></p>
+                      <div id="MilestoneFive-menu" class="submenu">
+                          <p><a href="#Kimberly">Kimberly Heagerty</a></p>
+                      </div>
+                  </div>
+              </section>
+          </div>
+      </div>
+
+      <div class="col-lg-9 descriptionbox">
+          <h2 id="SilverHumanPractices" class="text-center"><strong>Silver Humans Practices</strong></h2>
+          <p>SUMMARY</p>
+        <h3 id="SHPIdentification">Problem Identification</h3>
+        <p class="display: flex; justify-content: center;">
+          <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#EnvironmentalProblem" role="button" aria-expanded="false" aria-controls="EnvironmentalProblem">
+          Environmental Problem
+          </a>
+         </p>
+         <div class="collapse" id="EnvironmentalProblem">
+          <div class="card card-body">
+            <p>Co2 emission increase leading to climate change (include energy statistics) and affect human well-being</p>
+            <p>Current renewable vs non-renewable energy sources not effective enough to solve the issue </p>
+            <p>Stats on climate change negative impact, CO2 emission</p>
+            <p>Graphics/map</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#EnvironmentalProblem" role="button" aria-expanded="true" aria-controls="EnvironmentalProblem">
+                  Collapse
+              </a>
+          </p>
+          </div>
+         </div>
+        <p class="display: flex; justify-content: center;">
+          <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#RocCommunityProblem" role="button" aria-expanded="false" aria-controls="RocCommunityProblem">
+          Roc Community Problem
+          </a>
+         </p>
+         <div class="collapse" id="RocCommunityProblem">
+          <div class="card card-body">
+            <p>High rate of poverty => hard to spend money on new technology </p>
+            <p>Not enough trained professional to effectively run the technology (Not many skillful/educated people => hard to adapt and use technology) </p>
+            <p>Maybe some pics of disadvantaged neighborhoods?</p>
+            <p>Rochester Socioeconomic status/analysis</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#RocCommunityProblem" role="button" aria-expanded="true" aria-controls="RocCommunityProblem">
+                  Collapse
+              </a>
+          </p>
+          </div>
+         </div>
+        <h3 id="SHPStakeholder">Stakeholder Identification</h3>
+        <p class="display: flex; justify-content: center;">
+          <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#StakeholderGroups" role="button" aria-expanded="false" aria-controls="StakeholderGroups">
+          Stakeholder Groups
+          </a>
+         </p>
+         <div class="collapse" id="StakeholderGroups">
+          <div class="card card-body">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam totam perferendis distinctio quis magni accusamus. Voluptatibus eum placeat similique laborum distinctio consectetur at voluptatem nulla, dolorum ipsum aliquam sed. Dolorum, sunt cumque. Facilis eligendi voluptatibus exercitationem dolorum nisi beatae odio voluptates, natus omnis illum, amet voluptate qui, ut eos sint aliquid. Repellendus perspiciatis beatae nisi consequuntur saepe incidunt est et corporis laborum tenetur non adipisci aliquid optio libero sapiente inventore reprehenderit exercitationem ut architecto vitae, rem itaque eveniet. Pariatur maxime adipisci quasi similique assumenda. Veritatis voluptate necessitatibus explicabo eos, nobis possimus consectetur nemo porro pariatur ab magni blanditiis minus accusamus!</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#StakeholderGroups" role="button" aria-expanded="true" aria-controls="StakeholderGroups">
+                  Collapse
+              </a>
+          </p>
+          </div>
+         </div>
+
+         <h2 id="IntegratedHumanPractices" class="text-center"><strong>Integrated Human Practices</strong></h2>
+         <p>SUMMARY</p>
+       <h3 id="IHPSolution">Summarized Solution</h3>
+       <p class="display: flex; justify-content: center;">
+         <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#Solution-Summarized" role="button" aria-expanded="false" aria-controls="Solution-Summarized">
+         Solution
+         </a>
+        </p>
+        <div class="collapse" id="Solution-Summarized">
+         <div class="card card-body">
+           <p>Co2 emission increase leading to climate change (include energy statistics) and affect human well-being</p>
+           <p>Current renewable vs non-renewable energy sources not effective enough to solve the issue </p>
+           <p>Stats on climate change negative impact, CO2 emission</p>
+           <p>Graphics/map</p>
+           <p class="display: flex; justify-content: center;">
+             <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#Solution-Summarized" role="button" aria-expanded="true" aria-controls="Solution-Summarized">
+                 Collapse
+             </a>
+         </p>
+         </div>
+        </div>
+        <h1 id="Implementation">Implementation</h1>
+        <h1 id="Interviews">Interviews</h1>
+          <h2 id="MilestoneOne" class="text-center"><strong>Milestone 1:</strong></h2>
+          <p>Meeting with government, environmental organization, and sustainability anthropology professor and bioethicist to ask about Roc energy/environmental goal and what we can do to help </p>
+          <hr>
+          <h3 id="Scott">Scott Thompson</h3>
+          <p>Energy Smart Rochester</p>
+          <br>
+          <p>We spoke with Scott Thompson, an Environmental Sustainability Analyst in Energy Smart Rochester, to understand how Rochester addresses climate change and supports the community. Our primary focus was to explore how our project could benefit the Rochester community and align with the city’s sustainability efforts.</p>
+          <p class="display: flex; justify-content: center;">
+            <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#ScottThompson" role="button" aria-expanded="false" aria-controls="ScottThompson">
+            Read More
+            </a>
+           </p>
+           <div class="collapse" id="ScottThompson">
+            <div class="card card-body">
+              <h4><strong>Purpose</strong></h4>
+              <p>We aimed to gain insight into how a carbon-negative energy source could benefit the Rochester community, particularly in terms of health and financial impact.</p>
+              <h4><strong>Stakeholder Response</strong></h4>
+              <p>When discussing his experience as a Rochester City planner, he mentioned that if our project successfully reduces CO2 levels in the atmosphere, it could significantly improve the health and quality of life for Rochester residents. He also emphasized that diversifying the community’s energy sources would make Rochester more resilient to climate change. We then asked how we could gain support from residents and local organizations for implementing our project. He suggested that we clearly demonstrate how the project will specifically improve their lives, such as providing concrete numbers on how quickly the investment would pay for itself—whether in months or years. When asked about the most pressing challenges facing the Rochester community, he identified cost as a major concern, noting that many residents cannot afford the upfront expense of installing green energy alternatives like solar panels. To address this, he advised that our solution must be “affordable, low-maintenance, and accessible to people in all income brackets.” Additionally, given that our project involves cyanobacteria and new techniques unfamiliar to most people, he stressed the importance of thoroughly explaining the safety aspects of our project. He expressed confidence that our project has the potential to help wean the community off fossil fuels.</p>
+              <h4><strong>Action Plan</strong></h4>
+              <p>If we implement our project, we will clearly communicate the benefits of carbon-negative energy and the reduction of CO2 emissions to the public. We will address cost concerns by exploring funding options and offering financial assistance to reduce upfront costs for lower-income residents. Additionally, we will thoroughly explain the safety measures associated with using cyanobacteria through brochures, informational sessions with the community, and engagement with local media to reach a broader audience.</p>
+              <p class="display: flex; justify-content: center;">
+                <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#ScottThompson" role="button" aria-expanded="true" aria-controls="ScottThompson">
+                    Collapse
+                </a>
+            </p>
+            </div>
+           </div>
+          <h3 id="Shalini">Shalini Beath</h3>
+          <p>Manager of Energy and Sustainability Office at Energy Smart Rochester</p>
+          <br>
+          <p>To ensure our project benefits the local community, we spoke with Ms Shalini Beath to gain insights into the City of Rochester’s sustainability plans and how our technology could support these initiatives.</p>
+          <p class="display: flex; justify-content: center;">
+            <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#ShaliniBeath" role="button" aria-expanded="false" aria-controls="ShaliniBeath">
+            Read More
+            </a>
+           </p>
+           <div class="collapse" id="ShaliniBeath">
+            <div class="card card-body">
+              <h4><strong>Purpose</strong></h4>
+              <p>Ms. Beath, the Manager of the Energy and Sustainability office at Energy Smart Rochester, provided advice on integrating our technology into Rochester’s energy goal, with a focus on renewable energy and climate resilience.</p>
+              <h4><strong>Stakeholder Response</strong></h4>
+              <p>Ms Beath was enthusiastic about our project, noting its potential to power heat pumps, as well as providing clean heating and cooling, which are critical to combat the city’s harsh winter. Additionally, she identified significant barriers to new technologies adoption, such as cost, unfamiliarity and a shortage of skilled workers.</p>
+              <h4><strong>Action Plan</strong></h4>
+              <p>Based on her feedback, we plan to further explore Rochester's socioeconomic conditions to design affordable solutions and create outreach strategies that build trust and address barriers to adoption.</p>
+              <p>Moving forward, we aim to collaborate with city officials to showcase the functionality of our BPV technology and pursue grant opportunities to enhance its competitiveness with traditional solar panels.</p>
+              <p class="display: flex; justify-content: center;">
+                <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#ShaliniBeath" role="button" aria-expanded="true" aria-controls="ShaliniBeath">
+                    Collapse
+                </a>
+              </p>
+            </div>
+           </div>
+          <h3 id="Abigail">Abigail McHugh Grifa</h3>
+          <p>NY Mothers Out Front Chapter</p>
+          <br>
+          <p>PENDING EDIT APPROVAL</p>
+          <p class="display: flex; justify-content: center;">
+            <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#AbigailMcHughGrifa" role="button" aria-expanded="false" aria-controls="AbigailMcHughGrifa">
+            Read More
+            </a>
+           </p>
+           <div class="collapse" id="AbigailMcHughGrifa">
+            <div class="card card-body">
+              <h4><strong>Purpose</strong></h4>
+              <p>PENDING EDIT APPROVAL</p>
+              <h4><strong>Stakeholder Response</strong></h4>
+              <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+              <h4><strong>Action Plan</strong></h4>
+              <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+              <h4><strong>Future Steps</strong></h4>
+              <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#AbigailMcHughGrifa" role="button" aria-expanded="true" aria-controls="AbigailMcHughGrifa">
+                  Collapse
+              </a>
+            </p>
+            </div>
+           </div>
+          <h3 id="Carra">Carra Sahler J.D.</h3>
+          <p>Director of the Green Energy Institute at Lewis and Clark Law School</p>
+        <br>      
+            <p>We had the opportunity to interview Carra Sahler, J.D., Director of the Green Energy Institute at Lewis and Clark Law School and a specialist in environmental policy. Our goal was to gain insights on how to align our project with existing climate challenges. During our discussion, she provided valuable information about current technologies in use and highlighted the disparities in access to cleaner fuel sources.</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#CarraSahler" role="button" aria-expanded="false" aria-controls="CarraSahler">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="CarraSahler">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>The purpose of this interview was to explore how our project can address real-world issues. We sought insights from someone experienced in working with individuals dedicated to promoting green energy. Our goal was to understand what they would prioritize if they were developing their own clean energy solutions.L</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>We began by asking about the specific actions the Green Institute takes to combat climate change. She explained that their primary focus is on forming committees to advocate for changes in government policies related to fuel sourcing and addressing price disparities in lower-income communities, where fuel costs are rising. They are committed to eliminating fossil fuels as an energy source and holding organizations accountable for transparently reporting greenhouse gas emissions. When we discussed our project, she appreciated that we do not involve fossil fuel companies at any stage of our process and mentioned that she didn’t see "any downsides" to our project. However, she advised us to ensure that we do not create hazardous waste with the cyanobacteria or contribute to wastewater issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>Following this interview, we focused on the final implementation of our project, particularly on making our technology accessible to lower-income communities. To achieve this, we aim to minimize production costs, allowing us to offer the technology at a more affordable price. Additionally, we considered how to ensure that our carbon-negative energy source is reliable, as this is crucial for effectively serving these communities.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If our project were to become a reality, we would seek partnerships with organizations, like the Green Institute, to get more understanding of the communities we aim to serve as well as get people educated about green energy and its advantages.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#CarraSahler" role="button" aria-expanded="true" aria-controls="CarraSahler">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Karen">Dr Karen Berger</h3>
+            <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#KarenBerger" role="button" aria-expanded="false" aria-controls="KarenBerger">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="KarenBerger">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>To create immediate local impact that set the stage for our technology adoption by larger institutions, it is crucial to test out our technology on a smaller and more familiar scale like our university. Thus, an interview with a faculty member in our school is essential to learn more about our university resources such as experts and facilities.</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms Berger emphasized the potential value of BPV technology in contributing to the university’s energy goals. Since the university has ⅓ of electricity powered by natural gas and the remaining energy comes from solar and geothermal sources, our goal of creating carbon-negative energy sources would be a positive account for the university. Her other suggestions include exploring spaces on-campus, sustainability metrics, as well as focus on the long term impact of our device.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>Based on her feedback, we plan to conduct a life cycle assessment and carbon analysis to measure our technology efficiency and carbon emission. Additionally, we talked to the hardware team to design our biophotovoltaic cell to allow for easy separation of components.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we plan on integrating our technology in parking lots to form covering for snowy areas. This will help us to best utilize our campus limited space.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#KarenBerger" role="button" aria-expanded="true" aria-controls="KarenBerger">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Kristen">Dr Kristin Doughty</h3>
+            <p>As an anthropologist from the University of Rochester, Professor Doughty offers valuable guidance in navigating potential economic and cultural challenges with our technology. She gave us thought-provoking questions on how to engage communities and align our goals with both public and private sector. This knowledge is crucial to ensure that our biophotovoltaic cells are socially equitable, environmentally friendly, scalable and sustainable.</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#KristinDoughty" role="button" aria-expanded="false" aria-controls="KristinDoughty">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="KristinDoughty">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>We reached out to anthropology professor Kristin Doughty to gain a deep understanding of the socio-cultural and economic factors that might influence the success of biophotovoltaic technology.</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Instead of providing specific recommendations, Professor Doughty posed several thought-provoking questions, which are foundational for assessing the socio-cultural implications of our technology. This includes the differences between microgrid and national grid, optimal times for power generation, energy storage capacity, infrastructure needs, and distribution logistics, etc. She urged us to clarify whether we are primarily solving a social, economic, or environmental problem. She ended the interview by saying “If power is entirely privatized, we end up with the Elon Musk problem” which encourages us to involve the public sector in our project deployment. </p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>Her input suggests that our policy and practice team should collaborate closely with other sub-teams to address these key questions. More details on this will be provided in the Reflection and Proposed Implementation section of our Human Practice page.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If our project moves forward, we will seek support from government and non-profit organizations to help establish regulations, ensuring that our energy solution benefits everyone and avoids being monopolized by the wealthy.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#KristinDoughty" role="button" aria-expanded="true" aria-controls="KristinDoughty">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+
+
+
+
+
+
+          <h3 id="Jonathan">Dr Jonathan Herington</h3>
+            <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#JonathanHerington" role="button" aria-expanded="false" aria-controls="JonathanHerington">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="JonathanHerington">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#JonathanHerington" role="button" aria-expanded="true" aria-controls="JonathanHerington">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Mike">Mike Whitmore</h3>
+            <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#MikeWhitmore" role="button" aria-expanded="false" aria-controls="MikeWhitmore">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="MikeWhitmore">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#MikeWhitmore" role="button" aria-expanded="true" aria-controls="MikeWhitmore">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <hr>
+
+          <h2 id="MilestoneTwo" class="text-center"><strong>Milestone 2:</strong></h2>
+          <h3 id="Alistair">Dr Alistair McCormick</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#AlistairMcCormick" role="button" aria-expanded="false" aria-controls="AlistairMcCormick">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="AlistairMcCormick">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#AlistairMcCormick" role="button" aria-expanded="true" aria-controls="AlistairMcCormick">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Johnson">Dr Johnson & Young</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#JohnsonYoung" role="button" aria-expanded="false" aria-controls="JohnsonYoung">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="JohnsonYoung">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#JohnsonYoung" role="button" aria-expanded="true" aria-controls="JohnsonYoung">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <hr>
+
+          <h2 id="MilestoneThree" class="text-center"><strong>Milestone 3:</strong></h2>
+          <h3 id="Paolo">Dr Paolo Bombelli</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#PaoloBombelli" role="button" aria-expanded="false" aria-controls="PaoloBombelli">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="PaoloBombelli">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#PaoloBombelli" role="button" aria-expanded="true" aria-controls="PaoloBombelli">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Eileen">Dr Eileen Bushnell</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#EileenBushnell" role="button" aria-expanded="false" aria-controls="EileenBushnell">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="EileenBushnell">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#EileenBushnell" role="button" aria-expanded="true" aria-controls="EileenBushnell">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Jenny">Dr Jenny Zhang</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#JennyZhang" role="button" aria-expanded="false" aria-controls="JennyZhang">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="JennyZhang">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#JennyZhang" role="button" aria-expanded="true" aria-controls="JennyZhang">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Kara">Dr Kara Bren</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#KaraBren" role="button" aria-expanded="false" aria-controls="KaraBren">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="KaraBren">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#KaraBren" role="button" aria-expanded="true" aria-controls="KaraBren">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+
+          <h2 id="MilestoneFour" class="text-center"><strong>Milestone 4:</strong></h2>
+          <h3 id="Kiran">Kiran Gitanshu</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#KiranGitanshu" role="button" aria-expanded="false" aria-controls="KiranGitanshu">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="KiranGitanshu">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#KiranGitanshu" role="button" aria-expanded="true" aria-controls="KiranGitanshu">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Spencer">Spencer & Weissert</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#SpencerWeissert" role="button" aria-expanded="false" aria-controls="SpencerWeissert">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="SpencerWeissert">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#SpencerWeissert" role="button" aria-expanded="true" aria-controls="SpencerWeissert">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+          <h3 id="Gitanshu">Gitanshu Bhatia</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#GitanshuBhatia" role="button" aria-expanded="false" aria-controls="GitanshuBhatia">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="GitanshuBhatia">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#GitanshuBhatia" role="button" aria-expanded="true" aria-controls="GitanshuBhatia">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+
+          <h2 id="MilestoneFive" class="text-center"><strong>Milestone 5:</strong></h2>
+          <h3 id="Kimberly">Kimberly Heagerty</h3>
+          <p>PENDING EDIT APPROVAL</p>
+            <p class="display: flex; justify-content: center;">
+              <a class="btn btn-primary custom-purple full-width-button" data-bs-toggle="collapse" href="#KimberlyHeagerty" role="button" aria-expanded="false" aria-controls="KimberlyHeagerty">
+              Read More
+              </a>
+            </p>
+            <div class="collapse" id="KimberlyHeagerty">
+              <div class="card card-body">
+                <h4><strong>Purpose</strong></h4>
+                <p>PENDING EDIT APPROVAL</p>
+                <h4><strong>Stakeholder Response</strong></h4>
+                <p>Ms McHugh Grifa highlighted the need for collective action, creating solutions with others rather than focusing solely on individual efforts to implement more impactful solutions. Furthermore, she stressed the importance to reform the current business model and energy infrastructure, as the outdated grid is not equipped to handle new energy sources. Finally, she addressed the misconception that new technologies need to be flawless, while pointing out the inherent challenges of current energy sources. Therefore, she advised us to focus on our overall positive impact and ensure that it can outweigh these issues.</p>
+                <h4><strong>Action Plan</strong></h4>
+                <p>The interview encouraged us to focus on the sustainability efforts, such as explaining to other stakeholders and the end-users the benefits of biophotovoltaic technology and how it can contribute towards Rochester climate action goals.</p>
+                <h4><strong>Future Steps</strong></h4>
+                <p>If we were to implement our project, we would reach out to other local organizations such as the Genesee Finger Lakes Climate Collective to introduce our biophotovoltaic cell, as well as develop a long-term commercialization strategy to enter the renewable energy market. We will explore funding options that support grid updates and design a a new business model for energy distribution.</p>
+                <p class="display: flex; justify-content: center;">
+                  <a class="btn btn-secondary custom-purple full-width-button" data-bs-toggle="collapse" href="#KimberlyHeagerty" role="button" aria-expanded="true" aria-controls="KimberlyHeagerty">
+                      Collapse
+                  </a>
+                </p>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navbarHeight = document.querySelector(".navbar") ? document.querySelector(".navbar").offsetHeight : 0;
+
+    // Add event listeners to each main menu item for click behavior
+    document.querySelectorAll('#menu a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Scroll to the target element with smooth scrolling
+                window.scrollTo({
+                    top: targetElement.offsetTop - navbarHeight,
+                    behavior: 'smooth'
+                });
+
+                // Collapse all submenus first
+                document.querySelectorAll(".submenu").forEach(sub => {
+                    sub.style.display = "none";
+                });
+
+                // Expand the corresponding submenu if it exists
+                const submenu = document.querySelector(targetId + "-menu");
+                if (submenu) {
+                    submenu.style.display = "block";
+                }
+
+                // Remove 'active-green' class from all links and add it to the clicked one
+                document.querySelectorAll('#menu a').forEach(link => {
+                    link.classList.remove('active-green');
+                });
+                this.classList.add('active-green');
+            }
+        });
+    });
+});
+
+// Highlight the sidebar and submenu items while scrolling
+document.addEventListener("scroll", function() {
+    const sections = document.querySelectorAll(".descriptionbox h2");
+    const menuItems = document.querySelectorAll("#menu a");
+
+    let found = false;
+
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const id = section.id;
+        const submenu = document.getElementById(id + "-menu");
+
+        // Check if the section is in the viewport (halfway into view)
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+            if (!found) {
+                // Collapse all submenus
+                document.querySelectorAll(".submenu").forEach(sub => sub.style.display = "none");
+
+                // Expand the submenu for the active section
+                if (submenu) {
+                    submenu.style.display = "block";
+
+                    // Highlight the submenu links
+                    submenu.querySelectorAll("a").forEach(link => {
+                        link.classList.remove('active-green');
+                    });
+
+                    // Identify the appropriate subsection to highlight
+                    const activeSubsection = Array.from(submenu.querySelectorAll("a")).find(link => {
+                        const subId = link.getAttribute("href");
+                        const subSection = document.querySelector(subId);
+                        if (subSection) {
+                            const subRect = subSection.getBoundingClientRect();
+                            return subRect.top <= window.innerHeight / 2 && subRect.bottom >= 0;
+                        }
+                        return false;
+                    });
+
+                    if (activeSubsection) {
+                        activeSubsection.classList.add('active-green');
+                    }
+                }
+
+                // Highlight the main section link
+                menuItems.forEach(link => {
+                    link.classList.remove('active-green');
+                    if (link.getAttribute('href') === '#' + id) {
+                        link.classList.add('active-green');
+                    }
+                });
+
+                found = true; // Stop after the first visible section
+            }
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+  collapseButtons.forEach(button => {
+    const collapseTargetId = button.getAttribute('href').replace('#', '');
+    const collapseElement = document.getElementById(collapseTargetId);
+
+    if (collapseElement) {
+      collapseElement.addEventListener('hidden.bs.collapse', function () {
+        // Scroll to the button that was clicked (or to its previous heading)
+        button.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
+  });
+});
+
+</script>
+    
+    
+
+{% endblock %}
